@@ -20,7 +20,6 @@ export async function GET(req: NextRequest) {
         if (!access_token) {
             return NextResponse.json({ error: 'Not Found' }, { status: 404 })
         }
-        console.log(access_token)
         cookies().set({
             name: 'token',
             value: access_token,
